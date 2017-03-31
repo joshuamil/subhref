@@ -1,0 +1,25 @@
+{
+  "name": "Subhref",
+  "version": "0.0.2",
+  "manifest_version": 2,
+  "description": "Sends out requests to other pages in the background while you surf to thwart people who think it's ok to sell your browsing history.",
+  "browser_action": {
+    "default_icon": "icon128.png"
+  },
+  "browser_action": {
+    "default_icon": "icon128.png",
+    "default_popup": "subhref.html",
+    "default_title": "Make Some Noise!"
+  },
+  "icons": {
+    "48": "icon128.png"
+  },
+  "background":{
+    "scripts": ["subhref.js"]
+  },
+  "permissions": [
+    "<all_urls>",
+    "tabs",
+    "storage"
+  ]
+}

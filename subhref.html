@@ -1,0 +1,175 @@
+<html>
+<head>
+  <title>Subhref: Make some noise!</title>
+  <style>
+  html,
+  body {
+    font-family: sans-serif;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    max-width: 1200px;
+    min-width: 400px;
+  }
+  header,
+  footer {
+    background-color: #277FA6;
+    color: #fff;
+    padding: 1em;
+  }
+  section {
+    margin: 0 1em 1em;
+  }
+  img {
+    float: right;
+    margin: 0 .5em .5em .5em;
+  }
+  footer {
+    font-size: .85em;
+    padding: 2em 1em;
+  }
+
+  footer a {
+    color: #fff;
+  }
+
+  footer a:hover {
+    color: #fff;
+  }
+
+  div.notice {
+    background-color: red;
+    color: #fff;
+    display: none;
+    padding: 1em;
+  }
+
+  div.notice.enabled {
+    display: block;
+    margin: 0;
+  }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Combat ISP's Spying on Your Data!</h1>
+</header>
+
+<div class="notice">
+Since enabling this extension, you have sent <span class="count"></span>
+fake requests to your ISP.
+</div>
+
+<section>
+
+  <img src="icon128.png" alt="Subhref Icon" />
+
+  <h2>Overview</h2>
+
+  <p>
+  This plugin is pretty simple. For every request your browser makes to a website,
+  two additional calls to random websites are generated. These websites are generated
+  using common words and phrases. They may be real, popular websites, or they may be
+  completely made-up by the randomizer. Over time the randomizer will get better and
+  we'll be able to pollute the data stream with even more nonsense. If they're going
+  to take our data, let's at least make the information less useful.
+  </p>
+
+  <p>
+  If you're not aware of what's allowed to be sold now, without your permission and
+  without any ability to opt-out:
+  </p>
+
+  <ul>
+    <li>Geographic location</li>
+    <li>Children’s information</li>
+    <li>Health information</li>
+    <li>Financial information</li>
+    <li>Social Security numbers (no, really!)</li>
+    <li>Web browsing history</li>
+    <li>App usage history</li>
+    <li>The content of communications</li>
+    <li>Your name</li>
+    <li>Your address</li>
+    <li>Your IP address</li>
+    <li>Your current subscription level</li>
+  </ul>
+
+  <p>
+  Given that no one is asking for your permission to sell your personal information,
+  let's at least make that data harder to use by polluting its content with nonsense.
+  </p>
+
+  <h2>How does it work?</h2>
+  <p>
+  Behind the scenes, without opening any browser tabs or interrupting your browsing activities,
+  the extension will listen for outbound requests to websites. When a request is detected, it
+  will generate two more random URL's and make requests at the same time for those two pages.
+  You will never see the content and it doesn't mess with your browser history, so your experience
+  will be just like normal.
+  </p>
+
+  <p>
+  What the ISP's will see however is a bunch of traffic going to sites
+  that you may or may not have actually visited or have any interest in at all. By adding noise to
+  your browsing data, the ISP's will have no idea which sites you're actually visiting, making the
+  data they steal less valuable.
+  </p>
+
+  <h2>How can I see it working?</h2>
+  <p>
+  Well, it's not really straightforward, but you can watch the traffic to see the requests if you
+  really want to do so:
+
+  <ol type="number">
+    <li>Go to "Window > Extensions"</li>
+    <li>Scroll to the "Subhref" item and click on the "Background Page" link by the word "Inspect Views". </li>
+    <li>This will open an instance of the Google Inspector. </li>
+    <li>Click on "Network" then check the "Preserve log" checkbox </li>
+    <li>Leave that window open and go to any other browser tab </li>
+    <li>Enter a new URL and press "Enter" </li>
+    <li>Return to the "inspector" window and you will see a bunch of requests going out to randomly generated websites. </li>
+  </ol>
+
+  This will show you a list of all of the websites being accessed in the background as you browse.
+  </p>
+
+  <h2>Are you collecting this data?</h2>
+  <p>
+  No! Your browsing data is not captured, logged or transmitted to any third-party server
+  or service by this extension. In the future anonymous data <i>might</i> be sent in to a
+  remote server in order to facilitate "real url" network noise generation, but if and when
+  that happens it will be opt-in only and will be completely anonymous!
+  </p>
+
+  <h2>Why is it a paid app?</h2>
+  <p>
+  This is a paid plugin because well, my time isn't free and if I'm going to maintain
+  this as a tool for everyone then it will take some time. It's not expensive, but it
+  does cost something. Your dollars go toward ensuring a better product and toward
+  fighting the good fight. I will periodically make donations to the EFF and the ACLU
+  on behalf of the users of the extension.
+  </p>
+
+  <h2>How can I help fight this problem?</h2>
+  <p>
+  Call your representatives and tell them this is a terrible idea, that your privacy is more important than
+  the profits of a few large corporations and that you won't stand for this type of invasive legislation.
+  Then go donate money to the <a href="https://supporters.eff.org/donate/button">Electronic Frontier Foundation (EFF)</a>
+  and/or the <a href="https://action.aclu.org">ACLU</a> to help organizations who stand up for our rights both online
+  and in the physical world.
+  </p>
+
+</section>
+
+<footer>
+&copy; 2017 <a href="mailto:joshuamil@gmail.com">Joshua Miller</a>. All Rights Reserved.
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+</html>
